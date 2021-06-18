@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const weatherRequest = require('./requests/weather.request')
 
 const app = express()
 // 0c1688aca30194741d478936ff7451fd - ключ для работы с API сайта погоды
@@ -14,7 +15,7 @@ app.get('/', (req, res) => { //первый параметр - роут (слэ�
 
 app.post('/', (req, res) => { //первый параметр - роут (слэш) - корневой запрос, второй - функция, кот. принимает реквэст и респонс
     const { city } = req.body
-    console.log(city)
+    weatherRequest(city)
     res.render('index')
 })
 
