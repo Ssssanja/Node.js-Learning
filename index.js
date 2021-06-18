@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const app = express()
+// 0c1688aca30194741d478936ff7451fd - ключ для работы с API сайта погоды
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
